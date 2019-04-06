@@ -1,4 +1,4 @@
-package curse.springboot.springboot;
+package course.springboot.springboot;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

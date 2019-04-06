@@ -1,4 +1,4 @@
-package curse.springboot.springboot.model;
+package course.springboot.springboot.model;
 
 import java.io.Serializable;
 
@@ -20,7 +20,7 @@ public class Person implements Serializable {
 	
 	private String lastname;
 	
-	
+	private int age;
 
 	public Long getId() {
 		return id;
@@ -44,6 +44,14 @@ public class Person implements Serializable {
 
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
 	}
 	
 	
