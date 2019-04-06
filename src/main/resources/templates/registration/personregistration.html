@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http:www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Person Registration</title>
@@ -12,9 +12,19 @@
 		<input name="lastname">
 		<label>Age</label>
 		<input name="age">
+		<!-- <label>Student ID</label>
+		<input name="studentid"> -->
 		 <input
 			type="submit" value="Save">
 
 	</form>
+	
+	<table>
+	<tr th:each = "person : ${persons}">
+		<td th:text = "${person.id}"></td>
+		<td th:text = "${person.name}"></td>
+		<td th:text = "${person.lastname}"></td>
+	</tr>
+	</table>
 </body>
 </html>

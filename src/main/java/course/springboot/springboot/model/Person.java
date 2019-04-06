@@ -21,6 +21,8 @@ public class Person implements Serializable {
 	private String lastname;
 	
 	private int age;
+	
+//	private int studentid;
 
 	public Long getId() {
 		return id;
@@ -53,6 +55,14 @@ public class Person implements Serializable {
 	public void setAge(int age) {
 		this.age = age;
 	}
+
+//	public int getStudentid() {
+//		return studentid;
+//	}
+//
+//	public void setStudentid(int studentid) {
+//		this.studentid = studentid;
+//	}
 	
 	
 	
