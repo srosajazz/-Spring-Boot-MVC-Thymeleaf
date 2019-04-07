@@ -3,7 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Person Registration</title>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 </head>
+
 <body>
 	<form action="saveperson" method="post">
 	<label>Name</label>
@@ -12,10 +16,7 @@
 		<input name="lastname">
 		<label>Age</label>
 		<input name="age">
-		<!-- <label>Student ID</label>
-		<input name="studentid"> -->
-		 <input
-			type="submit" value="Save">
+		<input class="waves-effect waves-light btn" type="submit" value="Save">
 
 	</form>
 	<a href="/personlist">List of Persons</a>
@@ -27,5 +28,9 @@
 		<td th:text = "${person.lastname}"></td>
 	</tr>
 	</table>
+	
+	<!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="materialize/js/materialize.js"></script>
+        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>
