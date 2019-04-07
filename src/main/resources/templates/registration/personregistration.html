@@ -4,18 +4,20 @@
 <meta charset="UTF-8">
 <title>Person Registration</title>
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
-  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+ <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css"  media="screen,projection"/>
 </head>
 
 <body>
-	<form action="saveperson" method="post">
+	<form action="saveperson" method="post" th:object="${personobj}">
+	<label>ID</label>
+	<input name="id" th:field="*{id}" readonly="readonly">
 	<label>Name</label>
-		<input name="name"> 
+		<input name="name" th:field="*{name}">
 		<label>Last Name</label>
-		<input name="lastname">
+		<input name="lastname" th:field="*{lastname}">
 		<label>Age</label>
-		<input name="age">
+		<input name="age" th:field="*{age}">
 		<input class="waves-effect waves-light btn" type="submit" value="Save">
 
 	</form>
@@ -26,11 +28,13 @@
 		<td th:text = "${person.id}"></td>
 		<td th:text = "${person.name}"></td>
 		<td th:text = "${person.lastname}"></td>
+		<!--EDIT  -->
+		<td><a th:href="@{/editperson/{idperson}(idperson=${person.id})}">Edit</a></td>
 	</tr>
 	</table>
 	
 	<!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="materialize/js/materialize.js"></script>
-        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+      <script type="text/javascript" src="/materialize/js/materialize.js"></script>
+        <script type="text/javascript" src="/materialize/js/materialize.min.js"></script>
 </body>
 </html>
